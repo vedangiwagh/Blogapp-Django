@@ -1,0 +1,17 @@
+{% extends 'pages/index.html'%}
+{% block 'title'%}
+add post
+{%endblock%}
+{% block content%}
+<form method="post" action="{%url 'add_post'%}">
+    {%csrf_token%}
+   <input type="text" name="name" placeholder="enter name">
+    <br>
+       <input type="text" name="post_title" placeholder="enter title">
+    <br>
+       <textarea name="post" placeholder="your post" rows="8" cols="80"></textarea>
+    <br>
+       <button type="submit" value="submit">submit post</button>
+   </form>
+
+{%endblock%}

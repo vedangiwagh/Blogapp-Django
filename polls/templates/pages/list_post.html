@@ -1,0 +1,15 @@
+{% extends 'pages/index.html'%}
+{% block 'title'%}
+list post
+{%endblock%}
+{% block content%}
+{% for i in db%}
+
+<a href="{%url 'view_post' i.id%}">{{i.id}}</a>
+
+<p>{{i.title}}</p>
+<p>{{i.name}}</p>
+<p>{{i.post}}</p>
+<hr>
+{% endfor %}
+{%endblock%}

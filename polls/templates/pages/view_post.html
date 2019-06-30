@@ -1,0 +1,12 @@
+{% extends 'pages/index.html'%}
+{% block 'title'%}
+view post
+{%endblock%}
+{% block content %}
+{% if db%}
+<p>{{db.title}}</p>
+<p>{{db.name}}</p>
+<p>{{db.post}}</p>
+<p>Published on: {{db.publish_date}}</p>
+{%endif%}
+{%endblock%}

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block 'title'%} {%endblock%}</title>
+</head>
+<body>
+<a href="{%url 'add_post'%}">add post</a>
+<a href="{%url 'list_post'%}">list post</a>
+{% block content%} {%endblock%}
+</body>
+</html>
